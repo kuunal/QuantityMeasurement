@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.quantitymeasurement.UnitsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-18T16:57:01" hostname="DESKTOP-196HMRI" time="0.005">
+  <properties/>
+  <testcase name="givenBothFoot_WhenToZero_ReturnsEqualToTrue" classname="com.quantitymeasurement.UnitsTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
