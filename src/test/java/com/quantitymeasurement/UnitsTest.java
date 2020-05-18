@@ -70,4 +70,13 @@ public class UnitsTest {
         Assert.assertTrue(inch.checkEquals(anotherInch));
     }
 
+    @Test
+    public void givenInchAndFeetObject_WhenZero_ReturnsEqualToTrue(){
+        Inch inch = new Inch(0.0);
+        Inch feet = new Feet(0.0).toInch();
+        Assert.assertTrue(inch.checkEquals(feet));
+    }
+
+
+
 }

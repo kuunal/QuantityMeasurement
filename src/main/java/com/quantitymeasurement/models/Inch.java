@@ -7,7 +7,7 @@ public class Inch extends QuantityMeasurement{
     public double length;
     QuantityMeasurement quantityMeasurement = new QuantityMeasurement();
 
-    public Inch(double length) {
+    public Inch(Double length) {
         this.length=length;
     }
 
