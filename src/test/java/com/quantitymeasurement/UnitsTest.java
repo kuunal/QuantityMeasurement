@@ -1,9 +1,12 @@
 package com.quantitymeasurement;
 
-import com.quantitymeasurement.models.CM;
-import com.quantitymeasurement.models.Feet;
-import com.quantitymeasurement.models.Inch;
-import com.quantitymeasurement.models.Yards;
+import com.quantitymeasurement.units.CM;
+import com.quantitymeasurement.units.Feet;
+import com.quantitymeasurement.units.Inch;
+import com.quantitymeasurement.units.Yards;
+import com.quantitymeasurement.volumes.Gallon;
+import com.quantitymeasurement.volumes.Litres;
+import com.quantitymeasurement.volumes.ML;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -152,28 +155,43 @@ public class UnitsTest {
     public void givenTwoInch_WhenCorrect_ReturnsSum(){
         Inch inch = new Inch(2.0);
         Inch anotherInch = new Inch(2.0);
-        Assert.assertEquals(4.0,inch.addLengthsInInches(anotherInch.length,inch.length),0.0);
+        Assert.assertEquals(4.0,inch.addLengths(anotherInch.length,inch.length),0.0);
     }
 
     @Test
     public void givenFeetAndInch_WhenCorrect_ReturnsSum(){
         Inch inch = new Inch(2.0);
         Inch feet = new Feet(1.0).toInch();
-        Assert.assertEquals(14.0,inch.addLengthsInInches(inch.length,feet.length),0.0);
+        Assert.assertEquals(14.0,inch.addLengths(inch.length,feet.length),0.0);
     }
 
     @Test
     public void givenFeets_WhenCorrect_ReturnsSum(){
         Inch inch = new Feet(1.0).toInch();
         Inch anotherInch = new Feet(1.0).toInch();
-        Assert.assertEquals(24.0,inch.addLengthsInInches(anotherInch.length,inch.length),0.0);
+        Assert.assertEquals(24.0,inch.addLengths(anotherInch.length,inch.length),0.0);
     }
 
     @Test
     public void givenInchAndCM_WhenCorrect_ReturnsSum(){
         Inch inch = new Inch(2.0);
         Inch anotherInch = new CM(2.5).toInch();
-        Assert.assertEquals(3.0,inch.addLengthsInInches(anotherInch.length,inch.length),0.0);
+        Assert.assertEquals(3.0,inch.addLengths(anotherInch.length,inch.length),0.0);
     }
+
+    @Test
+    public void givenVolumeInGallonAndLitres_WhenEquals_ShouldReturnTrue(){
+        ML gallon = new Gallon(1.0).toML();
+        ML litres = new Litres(3.785).toML();
+        Assert.assertTrue(gallon.checkEquals(litres));
+    }
+
+    @Test
+    public void givenLitreAndML_WhenEqual_ReturnsTrue(){
+        ML ml = new ML(1000.0);
+        ML litre = new Litres(1.0).toML();
+        Assert.assertTrue(ml.checkEquals(litre));
+    }
+
 
 }

@@ -1,4 +1,4 @@
-package com.quantitymeasurement.models;
+package com.quantitymeasurement.units;
 
 import com.quantitymeasurement.QuantityMeasurement;
 
@@ -22,7 +22,7 @@ public class Inch extends QuantityMeasurement{
         return super.checkEquals(this.length, otherObj.length);
     }
 
-    public final Double addLengthsInInches(Double... inchLength) {
-        return super.addLengthsInInches(inchLength);
+    public final Double addLengths(Double... inchLength) {
+        return super.addLengths(inchLength);
     }
 }

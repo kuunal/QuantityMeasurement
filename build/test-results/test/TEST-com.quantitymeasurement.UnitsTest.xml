@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.quantitymeasurement.UnitsTest" tests="23" skipped="0" failures="0" errors="0" timestamp="2020-05-18T20:12:14" hostname="DESKTOP-196HMRI" time="0.067">
+<testsuite name="com.quantitymeasurement.UnitsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-18T20:45:25" hostname="DESKTOP-196HMRI" time="0.004">
   <properties/>
-  <testcase name="givenInchAndFeetObject_WhenZero_ReturnsEqualToTrue" classname="com.quantitymeasurement.UnitsTest" time="0.011"/>
-  <testcase name="givenTwoInch_WhenCorrect_ReturnsSum" classname="com.quantitymeasurement.UnitsTest" time="0.001"/>
-  <testcase name="givenInchObject_WithSameValues_ReturnsTrue" classname="com.quantitymeasurement.UnitsTest" time="0.004"/>
-  <testcase name="givenInchAndFeetObject_WhenLengthOne_ReturnsEqualToFalse" classname="com.quantitymeasurement.UnitsTest" time="0.004"/>
-  <testcase name="givenFoot_WhenNull_ReturnsFalse" classname="com.quantitymeasurement.UnitsTest" time="0.001"/>
-  <testcase name="givenInchAndCM_WhenCorrect_ReturnsSum" classname="com.quantitymeasurement.UnitsTest" time="0.007"/>
-  <testcase name="givenFeetObject_WhenReferanceSame_ReturnsTrue" classname="com.quantitymeasurement.UnitsTest" time="0.001"/>
-  <testcase name="givenFeetToOneAndInchToTwelve_WhenEquals_ReturnsToTrue" classname="com.quantitymeasurement.UnitsTest" time="0.001"/>
-  <testcase name="givenFeetAndInch_WhenCorrect_ReturnsSum" classname="com.quantitymeasurement.UnitsTest" time="0.001"/>
-  <testcase name="givenBothFoot_WhenToZero_ReturnsEqualToTrue" classname="com.quantitymeasurement.UnitsTest" time="0.001"/>
-  <testcase name="givenOneAndOneYard_WhenEquals_ReturnsFalse" classname="com.quantitymeasurement.UnitsTest" time="0.004"/>
-  <testcase name="givenInchObject_WhenNull_ReturnsFalse" classname="com.quantitymeasurement.UnitsTest" time="0.001"/>
-  <testcase name="givenFeetObject_WithSameValues_ReturnsTrue" classname="com.quantitymeasurement.UnitsTest" time="0.001"/>
-  <testcase name="givenOneInchAndOneYard_WhenEquals_ReturnsFalse" classname="com.quantitymeasurement.UnitsTest" time="0.0"/>
-  <testcase name="givenInchToTwelveAndFeetToOne_WhenEquals_ReturnsToTrue" classname="com.quantitymeasurement.UnitsTest" time="0.0"/>
-  <testcase name="givenOneYardAndThirtySixInch_WhenEquals_ReturnsTrue" classname="com.quantitymeasurement.UnitsTest" time="0.001"/>
-  <testcase name="givenInchObject_WhenTypeSame_ReturnsTrue" classname="com.quantitymeasurement.UnitsTest" time="0.0"/>
-  <testcase name="givenFeetObject_WhenTypeSame_ReturnsTrue" classname="com.quantitymeasurement.UnitsTest" time="0.0"/>
-  <testcase name="givenTwoInchAndFiveCM_WhenEquals_ReturnsTrue" classname="com.quantitymeasurement.UnitsTest" time="0.0"/>
-  <testcase name="givenInchObject_WhenReferanceSame_ReturnsTrue" classname="com.quantitymeasurement.UnitsTest" time="0.0"/>
-  <testcase name="givenOneYardAndThreeFeet_WhenEquals_ReturnsTrue" classname="com.quantitymeasurement.UnitsTest" time="0.0"/>
-  <testcase name="givenThreeFeetAndOneYard_WhenEquals_ReturnsTrue" classname="com.quantitymeasurement.UnitsTest" time="0.0"/>
-  <testcase name="givenFeets_WhenCorrect_ReturnsSum" classname="com.quantitymeasurement.UnitsTest" time="0.0"/>
+  <testcase name="givenLitreAndML_WhenEqual_ReturnsTrue" classname="com.quantitymeasurement.UnitsTest" time="0.004"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

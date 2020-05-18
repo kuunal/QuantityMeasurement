@@ -1,7 +1,5 @@
 package com.quantitymeasurement;
 
-import com.quantitymeasurement.models.Inch;
-
 public class QuantityMeasurement {
 
     public boolean checkEquals(Double length,Double otherLength){
@@ -10,7 +8,7 @@ public class QuantityMeasurement {
         return false;
     }
 
-    public Double addLengthsInInches(Double ...inchLength){
+    public Double addLengths(Double ...inchLength){
         if(inchLength.length==0){
             return 0.0;
         }else if(inchLength.length==1){

@@ -1,4 +1,4 @@
-package com.quantitymeasurement.models;
+package com.quantitymeasurement.units;
 
 public class Yards extends Inch{
     public double length;

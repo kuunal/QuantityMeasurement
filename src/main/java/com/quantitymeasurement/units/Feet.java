@@ -1,4 +1,4 @@
-package com.quantitymeasurement.models;
+package com.quantitymeasurement.units;
 
 public class Feet extends Inch{
     public double length;
