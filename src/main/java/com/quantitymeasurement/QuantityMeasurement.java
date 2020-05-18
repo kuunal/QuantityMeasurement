@@ -10,8 +10,10 @@ public class QuantityMeasurement {
             return false;
         if(obj==this)
             return true;
-        else
-            return false;
+        if(obj.getClass()==obj.getClass())
+            return true;
+
+        return false;
     }
 
 

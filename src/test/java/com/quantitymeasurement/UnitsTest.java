@@ -22,8 +22,17 @@ public class UnitsTest {
     }
 
     @Test
-    public void givenFeetObject_WhenSame_ReturnsTrue(){
+    public void givenFeetObject_WhenReferanceSame_ReturnsTrue(){
         Feet feet = new Feet(0.0);
         Assert.assertTrue(feet.equals(feet));
     }
+
+    @Test
+    public void givenFeetObject_WhenTypeSame_ReturnsTrue(){
+        Feet feet = new Feet(0.0);
+        Feet anotherFeet = new Feet(0.0);
+        Assert.assertTrue(feet.equals(anotherFeet));
+    }
+
+
 }
