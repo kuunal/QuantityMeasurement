@@ -9,9 +9,9 @@ public class UnitsTest {
 
     @Test
     public void givenBothFoot_WhenToZero_ReturnsEqualToTrue(){
-        Feet feet = new Feet(0.0);
-        Feet anotherFeet = new Feet(0.0);
-        Assert.assertEquals(feet.toInch(),anotherFeet.toInch());
+        Inch inch = new Feet(0.0).toInch();
+        Inch anotherInch = new Feet(0.0).toInch();
+        Assert.assertTrue(inch.checkEquals(anotherInch));
     }
 
     @Test
@@ -34,5 +34,11 @@ public class UnitsTest {
         Assert.assertTrue(feet.equals(anotherFeet));
     }
 
+    @Test
+    public void givenFeetObject_WithSameValues_ReturnsTrue(){
+        Inch inch = new Feet(2.0).toInch();
+        Inch anotherInch = new Feet(2.0).toInch();
+        Assert.assertTrue(inch.checkEquals(anotherInch));
+    }
 
 }

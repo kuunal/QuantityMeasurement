@@ -22,10 +22,10 @@ public class Inch extends QuantityMeasurement{
         return new Inch();
     }
 
-    @Override
-    protected final boolean checkEquals(Inch inch, Inch otherInch) {
-        return super.checkEquals(inch, otherInch);
+    public final boolean checkEquals(Inch otherInch){
+        if(this.length==otherInch.length)
+            return true;
+        return false;
     }
-
 
 }

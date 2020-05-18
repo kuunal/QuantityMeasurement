@@ -12,15 +12,9 @@ public class QuantityMeasurement {
             return true;
         if(obj.getClass()==obj.getClass())
             return true;
-
         return false;
     }
 
 
-    protected boolean checkEquals(Inch inch, Inch otherInch){
-        if(inch.length==otherInch.length)
-            return true;
-        return false;
-    }
 
 }
