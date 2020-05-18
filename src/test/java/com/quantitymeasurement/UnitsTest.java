@@ -77,6 +77,27 @@ public class UnitsTest {
         Assert.assertTrue(inch.checkEquals(feet));
     }
 
+    @Test
+    public void givenInchAndFeetObject_WhenLengthOne_ReturnsEqualToFalse(){
+        Inch inch = new Inch(1.0);
+        Inch feet = new Feet(1.0).toInch();
+        Assert.assertFalse(inch.checkEquals(feet));
+    }
+
+    @Test
+    public void givenInchToTwelveAndFeetToOne_WhenEquals_ReturnsToTrue(){
+        Inch inch = new Inch(12.0);
+        Inch feet = new Feet(1.0).toInch();
+        Assert.assertFalse(inch.checkEquals(feet));
+    }
+
+    @Test
+    public void givenFeetToOneAndInchToTwelve_WhenEquals_ReturnsToTrue(){
+        Inch inch = new Inch(12.0);
+        Inch feet = new Feet(1.0).toInch();
+        Assert.assertFalse(feet.checkEquals(inch));
+    }
+
 
 
 }
