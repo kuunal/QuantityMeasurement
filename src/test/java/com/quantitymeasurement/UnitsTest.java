@@ -1,5 +1,6 @@
 package com.quantitymeasurement;
 
+import com.quantitymeasurement.models.CM;
 import com.quantitymeasurement.models.Feet;
 import com.quantitymeasurement.models.Inch;
 import com.quantitymeasurement.models.Yards;
@@ -138,7 +139,13 @@ public class UnitsTest {
         Inch yards = new Yards(1.0).toInch();
         Inch feet = new Feet(3.0).toInch();
         Assert.assertTrue(feet.checkEquals(yards));
+    }
 
+    @Test
+    public void givenTwoInchAndFiveCM_WhenEquals_ReturnsTrue(){
+        Inch inch = new Inch(2.0);
+        Inch cm = new CM(5.0).toInch();
+        Assert.assertTrue(inch.checkEquals(cm));
     }
 
 }
