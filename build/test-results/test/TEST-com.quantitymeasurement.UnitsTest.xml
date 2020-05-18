@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.quantitymeasurement.UnitsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-18T17:56:10" hostname="DESKTOP-196HMRI" time="0.007">
+<testsuite name="com.quantitymeasurement.UnitsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-18T17:57:19" hostname="DESKTOP-196HMRI" time="0.004">
   <properties/>
-  <testcase name="givenInchObject_WhenNull_ReturnsFalse" classname="com.quantitymeasurement.UnitsTest" time="0.007"/>
+  <testcase name="givenInchObject_WhenReferanceSame_ReturnsTrue" classname="com.quantitymeasurement.UnitsTest" time="0.004"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

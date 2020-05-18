@@ -48,5 +48,12 @@ public class UnitsTest {
         Assert.assertTrue(inch.checkEquals(anotherInch));
     }
 
+    @Test
+    public void givenInchObject_WhenReferanceSame_ReturnsTrue(){
+        Inch inch = new Inch(0.0);
+        Assert.assertTrue(inch.equals(inch));
+    }
+
+
 
 }
