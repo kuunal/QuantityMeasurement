@@ -26,4 +26,6 @@ public class Inch extends QuantityMeasurement{
     protected final boolean checkEquals(Inch inch, Inch otherInch) {
         return super.checkEquals(inch, otherInch);
     }
+
+
 }

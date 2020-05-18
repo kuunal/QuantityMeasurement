@@ -5,14 +5,13 @@ import com.quantitymeasurement.models.Inch;
 public class QuantityMeasurement {
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o)
+    public boolean equals(Object obj) {
+        if(obj == null)
+            return false;
+        if(obj==this)
             return true;
-        if (o == null)
+        else
             return false;
-        if (this.getClass()!=o.getClass())
-            return false;
-        return true;
     }
 
 

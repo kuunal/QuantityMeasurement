@@ -1,11 +1,9 @@
 package com.quantitymeasurement.models;
 
-import com.quantitymeasurement.Units;
-
 public class Feet extends Inch{
     public double length;
 
-    public Feet(double length){
+    public Feet(Double length){
         this.length=length;
     }
 
