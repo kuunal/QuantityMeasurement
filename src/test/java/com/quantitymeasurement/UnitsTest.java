@@ -41,4 +41,12 @@ public class UnitsTest {
         Assert.assertTrue(inch.checkEquals(anotherInch));
     }
 
+    @Test
+    public void givenInchObject_WhenNull_ReturnsFalse(){
+        Inch inch = new Inch(0.0);
+        Inch anotherInch = new Inch(0.0);
+        Assert.assertTrue(inch.checkEquals(anotherInch));
+    }
+
+
 }
