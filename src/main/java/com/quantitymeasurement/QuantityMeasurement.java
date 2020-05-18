@@ -3,19 +3,19 @@ package com.quantitymeasurement;
 public class QuantityMeasurement {
 
     public boolean checkEquals(Double length,Double otherLength){
-        if(Double.compare(length,otherLength)   ==0)
+        if(Double.compare(length,otherLength)==0)
             return true;
         return false;
     }
 
-    public Double addLengths(Double ...inchLength){
-        if(inchLength.length==0){
+    public Double addLengths(Double ...Lengths){
+        if(Lengths.length==0){
             return 0.0;
-        }else if(inchLength.length==1){
-            return inchLength[0];
+        }else if(Lengths.length==1){
+            return Lengths[0];
         }else {
             Double total=0.0;
-            for (Double element : inchLength) {
+            for (Double element : Lengths) {
                 total+=element;
             }
             return total;

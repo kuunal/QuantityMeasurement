@@ -7,6 +7,9 @@ import com.quantitymeasurement.units.Yards;
 import com.quantitymeasurement.volumes.Gallon;
 import com.quantitymeasurement.volumes.Litres;
 import com.quantitymeasurement.volumes.ML;
+import com.quantitymeasurement.weights.Gram;
+import com.quantitymeasurement.weights.KG;
+import com.quantitymeasurement.weights.Tonne;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -199,6 +202,31 @@ public class UnitsTest {
         ML litres = new Litres(3.785).toML();
         Assert.assertEquals(7570.0,gallon.addLengths(gallon.length,litres.length),0);
     }
+
+    @Test
+    public void givenKGAndGram_WhenEquals_ReturnsTrue(){
+        Gram kg = new KG(1.0).toGram();
+        Gram gram = new Gram(1000.0);
+        Assert.assertTrue(kg.checkEquals(gram));
+    }
+
+    @Test
+    public void givenWeightInTonneAndKgs_WhenEqual_ReturnsTrue(){
+        Gram tonne = new Tonne(1.0).toGram();
+        Gram kg = new KG(1000.0).toGram();
+        Assert.assertTrue(kg.checkEquals(tonne));
+    }
+
+    @Test
+    public void givenWeight_InGramAndTonne_WhenAdded_ReturnsSum(){
+        Gram tonne = new Tonne(1.0).toGram();
+        Gram gram = new Gram( 1000.0);
+        Double addedWeigths = gram.addLengths(gram.weight,tonne.weight);
+        KG weigthInKGs = gram.FromGramToKG(addedWeigths);
+        Assert.assertEquals(1001.0,weigthInKGs.weight,0);
+    }
+
+
 
 
 }
