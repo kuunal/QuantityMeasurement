@@ -22,7 +22,7 @@ public class Inch extends QuantityMeasurement{
         return new Inch();
     }
 
-    public final boolean checkEquals(Inch otherInch){
+    public final boolean    checkEquals(Inch otherInch){
         if(this.length==otherInch.length)
             return true;
         return false;

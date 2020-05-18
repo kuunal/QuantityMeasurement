@@ -2,6 +2,7 @@ package com.quantitymeasurement;
 
 import com.quantitymeasurement.models.Feet;
 import com.quantitymeasurement.models.Inch;
+import com.quantitymeasurement.models.Yards;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -88,16 +89,56 @@ public class UnitsTest {
     public void givenInchToTwelveAndFeetToOne_WhenEquals_ReturnsToTrue(){
         Inch inch = new Inch(12.0);
         Inch feet = new Feet(1.0).toInch();
-        Assert.assertFalse(inch.checkEquals(feet));
+        Assert.assertTrue(inch.checkEquals(feet));
     }
 
     @Test
     public void givenFeetToOneAndInchToTwelve_WhenEquals_ReturnsToTrue(){
         Inch inch = new Inch(12.0);
         Inch feet = new Feet(1.0).toInch();
-        Assert.assertFalse(feet.checkEquals(inch));
+        Assert.assertTrue(feet.checkEquals(inch));
     }
 
 
+    @Test
+    public void givenThreeFeetAndOneYard_WhenEquals_ReturnsTrue() {
+        Inch yards = new Yards(1.0).toInch();
+        Inch feet = new Feet(3.0).toInch();
+        Assert.assertTrue(feet.checkEquals(yards));
+
+    }
+
+    @Test
+    public void givenOneAndOneYard_WhenEquals_ReturnsFalse() {
+        Inch yards = new Yards(1.0).toInch();
+        Inch feet = new Feet(1.0).toInch();
+        Assert.assertFalse(feet.checkEquals(yards));
+
+    }
+
+    @Test
+    public void givenOneInchAndOneYard_WhenEquals_ReturnsFalse() {
+        Inch yards = new Yards(1.0).toInch();
+        Inch feet = new Inch(1.0);
+        Assert.assertFalse(feet.checkEquals(yards));
+
+    }
+
+
+    @Test
+    public void givenOneYardAndThirtySixInch_WhenEquals_ReturnsTrue() {
+        Inch yards = new Yards(1.0).toInch();
+        Inch feet = new Inch(36.0);
+        Assert.assertTrue(feet.checkEquals(yards));
+    }
+
+
+    @Test
+    public void givenOneYardAndThreeFeet_WhenEquals_ReturnsTrue() {
+        Inch yards = new Yards(1.0).toInch();
+        Inch feet = new Feet(3.0).toInch();
+        Assert.assertTrue(feet.checkEquals(yards));
+
+    }
 
 }
