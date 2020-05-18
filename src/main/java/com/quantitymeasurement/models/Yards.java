@@ -8,11 +8,6 @@ public class Yards extends Inch{
     }
 
     @Override
-    public Yards inchToOtherUnit() {
-        return new Yards(length/(12*3));
-    }
-
-    @Override
     public Inch toInch() {
         return new Inch(length*(12*3));
     }

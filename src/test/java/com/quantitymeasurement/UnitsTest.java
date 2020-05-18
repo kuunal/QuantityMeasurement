@@ -148,4 +148,32 @@ public class UnitsTest {
         Assert.assertTrue(inch.checkEquals(cm));
     }
 
+    @Test
+    public void givenTwoInch_WhenCorrect_ReturnsSum(){
+        Inch inch = new Inch(2.0);
+        Inch anotherInch = new Inch(2.0);
+        Assert.assertEquals(4.0,inch.addLengthsInInches(anotherInch.length,inch.length),0.0);
+    }
+
+    @Test
+    public void givenFeetAndInch_WhenCorrect_ReturnsSum(){
+        Inch inch = new Inch(2.0);
+        Inch feet = new Feet(1.0).toInch();
+        Assert.assertEquals(14.0,inch.addLengthsInInches(inch.length,feet.length),0.0);
+    }
+
+    @Test
+    public void givenFeets_WhenCorrect_ReturnsSum(){
+        Inch inch = new Feet(1.0).toInch();
+        Inch anotherInch = new Feet(1.0).toInch();
+        Assert.assertEquals(24.0,inch.addLengthsInInches(anotherInch.length,inch.length),0.0);
+    }
+
+    @Test
+    public void givenInchAndCM_WhenCorrect_ReturnsSum(){
+        Inch inch = new Inch(2.0);
+        Inch anotherInch = new CM(2.5).toInch();
+        Assert.assertEquals(3.0,inch.addLengthsInInches(anotherInch.length,inch.length),0.0);
+    }
+
 }

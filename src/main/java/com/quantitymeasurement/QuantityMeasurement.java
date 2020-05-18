@@ -4,6 +4,26 @@ import com.quantitymeasurement.models.Inch;
 
 public class QuantityMeasurement {
 
+    public boolean checkEquals(Double length,Double otherLength){
+        if(Double.compare(length,otherLength)   ==0)
+            return true;
+        return false;
+    }
+
+    public Double addLengthsInInches(Double ...inchLength){
+        if(inchLength.length==0){
+            return 0.0;
+        }else if(inchLength.length==1){
+            return inchLength[0];
+        }else {
+            Double total=0.0;
+            for (Double element : inchLength) {
+                total+=element;
+            }
+            return total;
+        }
+    }
+
     @Override
     public boolean equals(Object obj) {
         if(obj == null)

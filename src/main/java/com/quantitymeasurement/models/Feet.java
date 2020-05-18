@@ -7,10 +7,6 @@ public class Feet extends Inch{
         this.length=length;
     }
 
-    @Override
-    public Feet inchToOtherUnit() {
-        return new Feet(length/12);
-    }
 
     @Override
     public Inch toInch() {
