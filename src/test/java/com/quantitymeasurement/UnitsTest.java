@@ -1,5 +1,7 @@
 package com.quantitymeasurement;
 
+import com.quantitymeasurement.temperature.Celsuis;
+import com.quantitymeasurement.temperature.Farenheit;
 import com.quantitymeasurement.units.CM;
 import com.quantitymeasurement.units.Feet;
 import com.quantitymeasurement.units.Inch;
@@ -227,6 +229,11 @@ public class UnitsTest {
     }
 
 
-
+    @Test
+    public void givenTemperature_InFarenheitAndCelsius_WhenEqual_ReturnsTrue(){
+        Farenheit farenheit = new Farenheit(212.0);
+        Farenheit celsius = new Celsuis(100.0);
+        Assert.assertTrue(farenheit.equals(celsius));
+    }
 
 }

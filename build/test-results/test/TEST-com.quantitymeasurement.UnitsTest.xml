@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.quantitymeasurement.UnitsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-18T21:30:07" hostname="DESKTOP-196HMRI" time="0.007">
+<testsuite name="com.quantitymeasurement.UnitsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-18T21:42:15" hostname="DESKTOP-196HMRI" time="0.005">
   <properties/>
-  <testcase name="givenWeight_InGramAndTonne_WhenAdded_ReturnsSum" classname="com.quantitymeasurement.UnitsTest" time="0.007"/>
+  <testcase name="givenTemperature_InFarenheitAndCelsius_WhenEqual_ReturnsTrue" classname="com.quantitymeasurement.UnitsTest" time="0.005"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
