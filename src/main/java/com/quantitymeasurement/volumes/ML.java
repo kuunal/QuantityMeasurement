@@ -17,6 +17,10 @@ public class ML extends QuantityMeasurement {
         return new ML(this.length);
     }
 
+    @Override
+    public Double addLengths(Double... inchLength) {
+        return super.addLengths(inchLength);
+    }
 
     public final boolean checkEquals(ML otherObj) {
         return super.checkEquals(this.length, otherObj.length);

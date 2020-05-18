@@ -193,5 +193,12 @@ public class UnitsTest {
         Assert.assertTrue(ml.checkEquals(litre));
     }
 
+    @Test
+    public void givenGallonAndLitres_WhenAdded_ReturnsSum(){
+        ML gallon =  new Gallon(1.0).toML();
+        ML litres = new Litres(3.785).toML();
+        Assert.assertEquals(7570.0,gallon.addLengths(gallon.length,litres.length),0);
+    }
+
 
 }
